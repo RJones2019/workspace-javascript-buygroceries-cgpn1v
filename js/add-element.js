@@ -31,6 +31,14 @@ function changeStyle() {
     $(this).removeClass('cool');
     $(this).addClass('complete');
   }
+  else if($(this).hasClass('complete')){
+    $(this).removeClass('complete');
+    $(this).addClass('cool');
+  }
+  else if($(this).hasClass('hot')){
+    $(this).removeClass('hot');
+    $(this).addClass('cool');
+  }
 }
 
 // delete complete element by clicking the trash can
