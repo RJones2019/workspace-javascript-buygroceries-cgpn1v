@@ -17,7 +17,7 @@ $('#add').click(addElement);
 function addElement() {
   // add a new element
   // add a input text box
-  $('#todo').append("<li>user</li>");
+  $('#todo').append("<li></li>");
   // whenever the user are done add the element
   
 }
