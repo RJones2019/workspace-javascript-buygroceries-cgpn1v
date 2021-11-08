@@ -40,7 +40,7 @@ $("#save").click(function() {
 
     firebase
     .firestore()
-    .collection("grocery list")
+    .collection("GroceryList")
     .add({
       item: value//?
     });
