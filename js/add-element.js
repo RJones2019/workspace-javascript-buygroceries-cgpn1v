@@ -17,9 +17,14 @@ $('#add').click(addElement);
 function addElement() {
   // add a new element
   // add a input text box
-  $('#todo').append("<li></li>");
+  $('#todo').append('<li><input type="text"></li>');
   // whenever the user are done add the element
-  
+  $('input').blur(function(){
+    $(this).parent().addClass('cool');
+    var items = $(this).val();
+    //replace the input box by the text
+    $(this).parent().text(items);
+  });
 }
 
 // bind click with the event handler
