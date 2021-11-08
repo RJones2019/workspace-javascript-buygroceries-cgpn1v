@@ -42,7 +42,8 @@ $("#save").click(function() {
     .firestore()
     .collection("grocery list")
     .add({
-      item: value//?
+      item: value,
+      name: "mom" //?
     });
 
 
