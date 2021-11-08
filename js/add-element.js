@@ -3,12 +3,13 @@
  */
 
 // get all the hot class elements- change them to cool class
-$('.hot').each(function(){
+$('li').each(function(){
   $(this).removeClass('hot');
   $(this).addClass('cool');
 });
 // traverse the elements
 $('#one').next().next().text('milk');
+$('#one').remove();
 // add a new element by clicking the plus sign
 $('#todo').append("<li>candy</li>");
 // before and after are for siblings
@@ -24,6 +25,11 @@ function addElement() {
     var items = $(this).val();
     //replace the input box by the text
     $(this).parent().text(items);
+
+    //click the new list will change the style
+    $('input').each(function(){
+      $(this).addClass('cool');
+    })
   });
 }
 
@@ -43,6 +49,8 @@ function changeStyle() {
   else if($(this).hasClass('hot')){
     $(this).removeClass('hot');
     $(this).addClass('cool');
+  }else{
+    $(this).addClass('complete');
   }
 }
 
@@ -51,4 +59,6 @@ document.getElementById('remove').addEventListener('click', removeElement);
 
 function removeElement() {
   // remove the marked elements  -- element with style complete
+  $('li.complete').remove();
+  
 }

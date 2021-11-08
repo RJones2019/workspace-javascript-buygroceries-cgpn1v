@@ -17,14 +17,13 @@ import * as firebaseui from "firebaseui";
 
 // Add Firebase project configuration object here
 var firebaseConfig = {
-  apiKey: "AIzaSyAzcwgZuLA7dO9g4sQhXQVTUgCo0M8m2qM",
-  authDomain: "grocerylist-91956.firebaseapp.com",
-  databaseURL: "https://grocerylist-91956.firebaseio.com",
-  projectId: "grocerylist-91956",
-  storageBucket: "grocerylist-91956.appspot.com",
-  messagingSenderId: "813812426276",
-  appId: "1:813812426276:web:93e5897af12892ff78dab1",
-  measurementId: "G-VZ83BTR72T"
+  apiKey: "AIzaSyBl7J7Wd1Zq6_oa10KIlBp7OO4R-K5ar-k",
+  authDomain: "csci225rj.firebaseapp.com",
+  projectId: "csci225rj",
+  storageBucket: "csci225rj.appspot.com",
+  messagingSenderId: "120469188494",
+  appId: "1:120469188494:web:cad0a933783eeb2a913edf",
+  measurementId: "G-RE4C3773J3"
 };
 
 firebase.initializeApp(firebaseConfig);
@@ -41,7 +40,7 @@ $("#save").click(function() {
 
     firebase
     .firestore()
-    .collection("mylist")
+    .collection("GroceryList")
     .add({
       item: value//?
     });
